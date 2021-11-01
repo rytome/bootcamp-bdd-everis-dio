@@ -15,4 +15,13 @@ public class CarrinhoSteps {
 				carrinhoPage.apresentouProdutoEsperadoNoCarrinho(nomeProduto));
 	}
 	
+	
+	@Entao("^o produto \"(.*)\" deve possuir a quantidade (.*)$")
+	public void oProdutoApresentouQuantidadeEsperada(String nomeProduto, String quantidadeProduto) {
+		CarrinhoPage carrinhoPage = new CarrinhoPage();
+		Assert.assertTrue("O produto ["+nomeProduto+"] deveria ter apresentado a quantidade [" + quantidadeProduto + "] no carrinho", 
+				carrinhoPage.oProdutoApresentouQuantidadeEsperada(nomeProduto, quantidadeProduto));
+	}
+
+	
 }
