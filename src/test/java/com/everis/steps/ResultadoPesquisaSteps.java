@@ -20,4 +20,7 @@ public class ResultadoPesquisaSteps {
 		resultadoPesquisaPage.acessarProduto(nomeProduto);
 	}
 	
+
+	
+	
 }

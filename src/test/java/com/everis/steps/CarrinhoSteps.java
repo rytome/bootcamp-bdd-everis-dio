@@ -3,7 +3,9 @@ package com.everis.steps;
 import org.junit.Assert;
 
 import com.everis.pages.CarrinhoPage;
+import com.everis.pages.ResultadoPesquisaPage;
 
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 
 public class CarrinhoSteps {
@@ -21,6 +23,12 @@ public class CarrinhoSteps {
 		CarrinhoPage carrinhoPage = new CarrinhoPage();
 		Assert.assertTrue("O produto ["+nomeProduto+"] deveria ter apresentado a quantidade [" + quantidadeProduto + "] no carrinho", 
 				carrinhoPage.oProdutoApresentouQuantidadeEsperada(nomeProduto, quantidadeProduto));
+	}
+	
+	@E("^acessa o checkout$")
+	public void acessarCheckout() {
+		CarrinhoPage carrinhoPage = new CarrinhoPage();
+		carrinhoPage.acessarCheckout();
 	}
 
 	
